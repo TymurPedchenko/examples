@@ -1,0 +1,286 @@
+/* ========== COMMON ========== */
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* ========== /COMMON ========== */
+
+/* ========== BODY ========== */
+
+.body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* ========== /BODY ========== */
+
+/* ========== CUBE ========== */
+
+/* @keyframes spinCube {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+} */
+
+@keyframes spinCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube-scene {
+  position: relative;
+  margin: 80px 0;
+
+  height: 200px;
+
+  perspective: 500px;
+  border: none;
+
+  /* border: 1px solid #ccc; */
+}
+
+.cube {
+  position: relative;
+  margin: 0 auto;
+
+  width: 200px;
+  height: 200px;
+
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+}
+
+.static_cube {
+  position: relative;
+  margin: 0 auto;
+
+  width: 200px;
+  height: 200px;
+
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 1500ms ease-in-out;
+}
+
+.static_cube.show-front {
+  transform: translateZ(-100px) rotateY(0deg);
+}
+.static_cube.show-right {
+  transform: translateZ(-100px) rotateY(-90deg);
+}
+.static_cube.show-back {
+  transform: translateZ(-100px) rotateY(-180deg);
+}
+.static_cube.show-left {
+  transform: translateZ(-100px) rotateY(90deg);
+}
+.static_cube.show-top {
+  transform: translateZ(-100px) rotateX(-90deg);
+}
+.static_cube.show-bottom {
+  transform: translateZ(-100px) rotateX(90deg);
+}
+
+.cube.is-spinning {
+  animation: spinCube 8000ms infinite linear;
+}
+
+.cube-face {
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+
+  border: 2px solid black;
+}
+
+.cube-face-front {
+  transform: rotateY(0deg) translateZ(100px);
+  background: hsla(0, 100%, 50%, 0.7);
+}
+
+.cube-face-right {
+  transform: rotateY(90deg) translateZ(100px);
+  background: hsla(60, 100%, 50%, 0.7);
+}
+
+.cube-face-back {
+  transform: rotateY(180deg) translateZ(100px);
+  background: hsla(120, 100%, 50%, 0.7);
+}
+
+.cube-face-left {
+  transform: rotateY(-90deg) translateZ(100px);
+  background: hsla(180, 100%, 50%, 0.7);
+}
+
+.cube-face-top {
+  transform: rotateX(90deg) translateZ(100px);
+  background: hsla(240, 100%, 50%, 0.7);
+}
+
+.cube-face-bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background: hsla(300, 100%, 50%, 0.7);
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.radio-group-list {
+  display: flex;
+  gap: 10px;
+}
+
+/* ========== /CUBE ========== */
+
+/* ========== CAROUSEL ========== */
+
+/* .carousel-scene {
+  position: relative;
+
+  width: 250px;
+  height: 150px;
+
+  perspective: 1000px;
+}
+
+.carousel {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+}
+
+.carousel_cell {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 200px;
+  height: 100px;
+}
+
+.carousel_cell:nth-child(1) {
+  transform: rotateY(0deg);
+}
+
+.carousel_cell:nth-child(2) {
+  transform: rotateY(40deg);
+}
+
+.carousel_cell:nth-child(3) {
+  transform: rotateY(80deg);
+}
+
+.carousel_cell:nth-child(4) {
+  transform: rotateY(120deg);
+}
+
+.carousel_cell:nth-child(5) {
+  transform: rotateY(160deg);
+}
+
+.carousel_cell:nth-child(6) {
+  transform: rotateY(200deg);
+}
+
+.carousel_cell:nth-child(7) {
+  transform: rotateY(240deg);
+}
+
+.carousel_cell:nth-child(8) {
+  transform: rotateY(280deg);
+}
+
+.carousel_cell:nth-child(9) {
+  transform: rotateY(320deg);
+}
+
+.carousel */
+
+/* ========== /CAROUSEL ========== */
+
+/* ========== CARD FLIP ========== */
+
+/* .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+
+  width: 200px;
+  height: 350px;
+
+    border: 1px solid;
+  border-radius: 4px;
+  perspective: 500px;
+}
+
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: blue;
+  transition: transform 500ms linear;
+  border-radius: 4px;
+  backface-visibility: hidden;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: red;
+  transform: rotateY(180deg);
+  transition: transform 500ms linear;
+  border-radius: 4px;
+  backface-visibility: hidden;
+}
+
+.card:hover .back {
+  transform: rotateY(360deg);
+} */
+
+/* ========== /CARD FLIP ========== */

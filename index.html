@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Cube -->
+    <div class="cube-scene">
+      <ul class="cube is-spinning list">
+        <li class="cube-face cube-face-front">front</li>
+        <li class="cube-face cube-face-back">back</li>
+        <li class="cube-face cube-face-right">right</li>
+        <li class="cube-face cube-face-left">left</li>
+        <li class="cube-face cube-face-top">top</li>
+        <li class="cube-face cube-face-bottom">bottom</li>
+      </ul>
+    </div>
+
+    <div class="cube-scene">
+      <ul class="static_cube list">
+        <li class="cube-face cube-face-front">front</li>
+        <li class="cube-face cube-face-back">back</li>
+        <li class="cube-face cube-face-right">right</li>
+        <li class="cube-face cube-face-left">left</li>
+        <li class="cube-face cube-face-top">top</li>
+        <li class="cube-face cube-face-bottom">bottom</li>
+      </ul>
+    </div>
+    <div class="radio-group">
+      <ul class="radio-group-list list">
+        <li>
+          <label
+            ><input
+              type="radio"
+              name="rotate-cube-side"
+              value="front"
+              checked
+            />front</label
+          >
+        </li>
+
+        <li>
+          <label
+            ><input
+              type="radio"
+              name="rotate-cube-side"
+              value="back"
+            />back</label
+          >
+        </li>
+
+        <li>
+          <label
+            ><input
+              type="radio"
+              name="rotate-cube-side"
+              value="right"
+            />right</label
+          >
+        </li>
+
+        <li>
+          <label
+            ><input
+              type="radio"
+              name="rotate-cube-side"
+              value="left"
+            />left</label
+          >
+        </li>
+
+        <li>
+          <label
+            ><input
+              type="radio"
+              name="rotate-cube-side"
+              value="top"
+            />top</label
+          >
+        </li>
+
+        <li>
+          <label
+            ><input
+              type="radio"
+              name="rotate-cube-side"
+              value="bottom"
+            />bottom</label
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- /Cube -->
+
+    <!-- Carousel -->
+    <!-- <div class="carousel-scene">
+      <ul class="carousel list">
+        <li class="carousel_cell">1</li>
+        <li class="carousel_cell">2</li>
+        <li class="carousel_cell">3</li>
+        <li class="carousel_cell">4</li>
+        <li class="carousel_cell">5</li>
+        <li class="carousel_cell">6</li>
+        <li class="carousel_cell">7</li>
+        <li class="carousel_cell">8</li>
+        <li class="carousel_cell">9</li>
+      </ul>
+    </div> -->
+    <!-- /Carousel -->
+
+    <!-- Card Flip -->
+    <!-- <div class="wrapper">
+      <ul class="card list">
+        <li class="front"><span>FRONT</span></li>
+        <li class="back"><span>BACK</span></li>
+      </ul>
+    </div> -->
+    <!-- /Card Flip -->
+
+    <script src="./modal.js"></script>
+  </body>
+</html>
